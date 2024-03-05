@@ -1,3 +1,5 @@
+from log import log_file
+
 print("Welcome to Python E - Note")
 print("Press 1 for generate Note")
 print("Press 2 for view Note")
@@ -19,7 +21,9 @@ def generate_note():
         file.write("\n------END------\n")
 
     print(f"Note for '{note_title}' has been created by {generator_name}")
-
+    message = " Generated"
+    log_file(message)
+    
 def view_notes():
    
     with open(notes_file, 'r') as file:
@@ -27,6 +31,8 @@ def view_notes():
 
     print("Your Notes:")
     print(notes)
+    message = " viewed"
+    log_file(message)
 
 def handle_choice():
     if user_choice == 1:

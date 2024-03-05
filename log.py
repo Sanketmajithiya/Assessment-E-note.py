@@ -1,6 +1,12 @@
 from datetime import datetime
 
 def log_file(Details):
-    datetime = datetime.now().strftime("%Y-%m-%d %H: %M:%s")
+    current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     file = open('log.txt','a')
-    file.write("f{Date Time}:{Details}\n") 
+    file.write(f"{current_datetime}:{Details}\n") 
+    
+message = "hello world"
+
+
+
+
