@@ -27,5 +27,3 @@ while True:
         break
     else:
         print("Error: Invalid Input")
-        message = " viewed"
-        log_file(message)

@@ -1,3 +1,5 @@
+from log import log_file
+
 """Generate a new note and save it to a file."""
 
 generator_name = input("Enter Python E-Note Generator Name: ")
@@ -5,8 +7,6 @@ while not generator_name.isalpha():
         print("Error: Invalid Input")
         generator_name = input("Enter Python E-Note Generator Name: ")
          
-        message = " viewed"
-        log_file(message)
         
 note_title = input("Enter Python E-Note Title: ")
 while not note_title.isalpha():
@@ -34,6 +34,10 @@ def view_notes():
         print("Error: File not found.")
     except Exception as e:
         print(f"Error: {e}")
+    
+    message = " viewed_notes"
+    log_file(message)
+
 
 while True:
     print("1. Add a new note")
